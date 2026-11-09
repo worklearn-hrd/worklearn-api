@@ -1,3 +1,9 @@
 spring:
   application:
     name: worklearn-api
+  profiles:
+    # 프로파일을 지정하지 않으면 api로 뜬다.
+    #   api    — REST API (기본)
+    #   worker — Kafka 컨슈머·Outbox 폴러 (2단계에서 추가)
+    #   seed   — 테스트 데이터를 넣고 종료
+    default: api
